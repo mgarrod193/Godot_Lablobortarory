@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://ciu5peayjm3sx"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_olf13"]
+[ext_resource type="Texture2D" uid="uid://bb7l186r4wygl" path="res://Assets/puzzle_hero/hero_0.png" id="2_7ug2v"]
+[ext_resource type="Texture2D" uid="uid://bfxudmmjteb6c" path="res://Assets/puzzle_hero/hero_1.png" id="3_7yl6q"]
+[ext_resource type="Texture2D" uid="uid://b1hyrt8lv603c" path="res://Assets/puzzle_hero/hero_2.png" id="4_p58ue"]
+[ext_resource type="Texture2D" uid="uid://x50iy1wm00qu" path="res://Assets/puzzle_hero/hero_5.png" id="5_646wr"]
+[ext_resource type="Texture2D" uid="uid://bpdreitgf4urp" path="res://Assets/puzzle_hero/hero_3.png" id="6_1alci"]
+[ext_resource type="Texture2D" uid="uid://di4lt7pkecrhc" path="res://Assets/puzzle_hero/hero_4.png" id="7_67fnw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pal2g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7ug2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7yl6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p58ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_646wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1alci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_67fnw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py7b2"]
+size = Vector2(16, 16)
+
+[node name="main" type="Node"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_olf13")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_pal2g")
+autoplay = "default"
+frame_progress = 0.388432
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_py7b2")
