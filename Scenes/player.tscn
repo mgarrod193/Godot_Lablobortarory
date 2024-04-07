@@ -45,11 +45,12 @@ size = Vector2(16, 16)
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_8h6gm")
+push_force = 5.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pal2g")
 autoplay = "default"
-frame_progress = 0.491151
+frame_progress = 0.296007
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_l2smw")
@@ -57,3 +58,7 @@ shape = SubResource("RectangleShape2D_l2smw")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 4.71239
+target_position = Vector2(1.90798e-07, 16)

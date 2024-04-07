@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -450.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@export var push_force : float = 80
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -26,3 +27,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, 12)
 
 	move_and_slide()
+
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
