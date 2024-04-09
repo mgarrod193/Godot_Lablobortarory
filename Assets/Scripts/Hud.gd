@@ -1,16 +1,8 @@
 extends CanvasLayer
 
-signal restart
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+signal restart #signal for restarting game
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
+#emits restart signal when button pressed
 func _restart_pressed():
 	restart.emit()
