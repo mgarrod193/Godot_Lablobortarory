@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr6ee3k887cdu"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/LaserRight.gd" id="1_i2o8e"]
+[ext_resource type="Texture2D" uid="uid://ctx2gmsgpwqsq" path="res://Assets/Art/Textures/Laser_Left.tres" id="1_tp0im"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r4l5j"]
+a = Vector2(-8, 0)
+b = Vector2(8, 0)
+
+[node name="LaserLeft" type="Area2D"]
+script = ExtResource("1_i2o8e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_r4l5j")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tp0im")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

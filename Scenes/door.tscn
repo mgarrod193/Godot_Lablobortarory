@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://0314grf7up3d"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Door.gd" id="1_0ak2c"]
+[ext_resource type="Texture2D" uid="uid://boglxffgxtovn" path="res://Assets/Art/puzzle_tileset.png" id="2_da8bs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyi44"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tkxt"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm6rj"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_276gn"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et6qc"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(112, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24ep6"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(112, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eypan"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3kov"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdmj8"]
+atlas = ExtResource("2_da8bs")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1qgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tkxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm6rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_276gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et6qc")
+}],
+"loop": false,
+"name": &"close",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24ep6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eypan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3kov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdmj8")
+}],
+"loop": false,
+"name": &"open",
+"speed": 6.0
+}]
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_0ak2c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pyi44")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t1qgw")
+animation = &"close"

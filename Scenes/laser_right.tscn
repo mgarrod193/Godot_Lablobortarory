@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c85l1bfwce28k"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/LaserRight.gd" id="1_lks2l"]
+[ext_resource type="Texture2D" uid="uid://boglxffgxtovn" path="res://Assets/Art/puzzle_tileset.png" id="2_2g7wc"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_unm0a"]
+a = Vector2(-4, 0)
+b = Vector2(12, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etfad"]
+atlas = ExtResource("2_2g7wc")
+region = Rect2(112, 16, 16, 16)
+
+[node name="LaserRight" type="Area2D"]
+script = ExtResource("1_lks2l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0)
+shape = SubResource("SegmentShape2D_unm0a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_etfad")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
