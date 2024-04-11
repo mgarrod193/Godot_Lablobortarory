@@ -33,10 +33,33 @@ animations = [{
 "name": &"default",
 "speed": 10.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dhf02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1e4dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mirjd")
+}],
 "loop": true,
-"name": &"new_animation",
-"speed": 5.0
+"name": &"left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7ll5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_64b5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i0paj")
+}],
+"loop": true,
+"name": &"right",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l2smw"]
@@ -47,14 +70,15 @@ texture_filter = 1
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_8h6gm")
-push_force = 5.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pal2g")
+animation = &"right"
 autoplay = "default"
-frame_progress = 0.693487
+frame_progress = 0.522543
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.94, 0.94)
 shape = SubResource("RectangleShape2D_l2smw")
 
 [node name="Camera2D" type="Camera2D" parent="."]

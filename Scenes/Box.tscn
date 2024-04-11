@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b86lkmf4dm833"]
+
+[ext_resource type="Texture2D" uid="uid://clxj4rr44oy0t" path="res://Assets/Art/Objects/moveable_block.png" id="1_e7dkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umkgk"]
+size = Vector2(16, 16)
+
+[node name="MoveableCube" type="RigidBody2D"]
+texture_filter = 1
+mass = 0.1
+gravity_scale = 0.1
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e7dkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_umkgk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

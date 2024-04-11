@@ -21,6 +21,15 @@ func _ready():
 	starting_position = position
 
 
+#changes animation based on .x velocity
+func _process(_delta):
+	if velocity.x > 0:
+		$AnimatedSprite2D.play("right")
+	elif velocity.x < 0:
+		$AnimatedSprite2D.play("left")
+	else: $AnimatedSprite2D.play("default")
+
+
 #Checks if player can move and adjusts velocity based on movement input
 func _physics_process(delta):
 	if can_move:
