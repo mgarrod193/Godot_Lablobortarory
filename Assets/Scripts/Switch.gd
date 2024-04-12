@@ -36,6 +36,9 @@ func _on_body_entered(body):
 		$ButtonPressed.show()
 		$ButtonNotPressed.hide()
 		is_pressed = true
+	$CollisionShape2D.set_deferred("disabled", true)
+	await get_tree().create_timer(0.5).timeout #delay on button being pressed
+	$CollisionShape2D.set_deferred("disabled", false)
 
 
 func restart():

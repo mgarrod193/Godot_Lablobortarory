@@ -14,7 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #Sets the length of the line based on collide point
-func _process(delta):
+func _process(_delta):
 	$Line2D.set_point_position(1, collide_point) # To set a point position
 	
 	#checks if colliding and kills target if collider is player
@@ -24,7 +24,7 @@ func _process(delta):
 
 
 #gets the collide point coordinates if it exists else returns target position coords
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_colliding():
 		collide_point = to_local(get_collision_point())
 	else:
