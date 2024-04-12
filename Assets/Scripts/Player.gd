@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal killed #signal for when player is killed
+signal collected #signal for collecting objects
 
 #player vairables
 var can_move = true
@@ -75,3 +76,8 @@ func restart():
 	$CollisionShape2D.set_deferred("disabled", false)
 	show()
 	can_move = true
+
+
+
+func collect():
+	collected.emit()
