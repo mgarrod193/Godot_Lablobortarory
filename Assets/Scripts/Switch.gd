@@ -3,10 +3,17 @@ extends Area2D
 #button variables
 @export var target_object : Node #object button is attached to
 @export var is_pressed = false
+var button_initial_status
 
 
-#checks starting status of button and displays apporopriate appearance
+#called at start of scene
 func _ready():
+	button_initial_status = is_pressed
+	initial_setup()
+
+
+#sets the correct appearance for the button
+func initial_setup():
 	if is_pressed:
 		$ButtonPressed.show()
 		$ButtonNotPressed.hide()
@@ -31,5 +38,6 @@ func _on_body_entered(body):
 		is_pressed = true
 
 
-
-		
+func restart():
+	is_pressed = button_initial_status
+	initial_setup()

@@ -20,4 +20,7 @@ func _on_player_killed():
 #Triggers game resatart
 func _on_restart():
 	game_over = false
+	$Player.restart()
+	get_tree().call_group("Lasers", "restart")
+	get_tree().call_group("switches", "restart")
 	$Hud.hide()

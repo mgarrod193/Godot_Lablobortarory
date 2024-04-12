@@ -70,7 +70,7 @@ func die():
 
 #called when restart is pressed. resets position to last starting_position
 #turns collision on, shows character and allows movment
-func collision_on():
+func restart():
 	position = starting_position
 	$CollisionShape2D.set_deferred("disabled", false)
 	show()

@@ -1,8 +1,15 @@
 extends RayCast2D
 
 #laser variables
+var initial_status
+var line_initial_status
 var collide_point
 var target = get_target_position()
+
+
+func _ready():
+	initial_status = is_enabled()
+	line_initial_status = $Line2D.visible
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,4 +39,9 @@ func switch():
 	else:
 		set_enabled(true)
 		$Line2D.visible = true
-	
+
+
+#called when game restarted to set back to original shape
+func restart():
+	set_enabled(initial_status)
+	$Line2D.visible = line_initial_status
