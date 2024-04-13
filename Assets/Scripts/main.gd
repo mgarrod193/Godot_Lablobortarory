@@ -31,4 +31,4 @@ func _on_restart():
 
 func _on_player_collected():
 	score += 1
-	print(score)
+	$GUI.update_score(score)

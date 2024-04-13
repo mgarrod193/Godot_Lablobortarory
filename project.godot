@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Labloboratory"
-run/main_scene="res://Scenes/main.tscn"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,10 @@ window/size/viewport_height=720
 [dotnet]
 
 project/assembly_name="Labloboratory"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/User/Documents/GD/SimpleGoDot/Labloboratory/movie.avi"
 
 [input]
 

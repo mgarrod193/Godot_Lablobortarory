@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1qvuuyqoq6np"]
+
+[ext_resource type="Script" path="res://GUI.gd" id="1_83hdp"]
+
+[node name="GUI" type="Node"]
+script = ExtResource("1_83hdp")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_bottom = 104.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 60
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

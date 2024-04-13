@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var opened : bool #Initial door state
-
+@export var level : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 # Check stating state of door and displays apporiate visual
@@ -30,4 +30,8 @@ func open():
 func close():
 	opened = false
 	$AnimatedSprite2D.play("close")
-	
+
+
+#called when moving to next level
+func next_level():
+	get_tree().change_scene_to_packed(level)
