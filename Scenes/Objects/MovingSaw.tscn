@@ -10,7 +10,7 @@ radius = 7.0
 [node name="MovingSaw" type="Sprite2D"]
 texture = ExtResource("1_nfmg6")
 script = ExtResource("2_8erie")
-speed = Vector2(0, 10)
+speed = Vector2(0, 20)
 
 [node name="saw" type="Area2D" parent="."]
 

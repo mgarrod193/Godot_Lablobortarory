@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnjjqn2bfng5u"]
+[gd_scene load_steps=11 format=3 uid="uid://bnjjqn2bfng5u"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_8h6gm"]
 [ext_resource type="Texture2D" uid="uid://bb7l186r4wygl" path="res://Assets/Art/puzzle_hero/hero_0.png" id="2_dhf02"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://x50iy1wm00qu" path="res://Assets/Art/puzzle_hero/hero_5.png" id="5_i0paj"]
 [ext_resource type="Texture2D" uid="uid://bpdreitgf4urp" path="res://Assets/Art/puzzle_hero/hero_3.png" id="6_7ll5r"]
 [ext_resource type="Texture2D" uid="uid://di4lt7pkecrhc" path="res://Assets/Art/puzzle_hero/hero_4.png" id="7_64b5w"]
+[ext_resource type="AudioStream" uid="uid://f3aw6hho45ri" path="res://Assets/Sfx/cartoon-jump-6462.mp3" id="8_n7sgg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pal2g"]
 animations = [{
@@ -88,3 +89,6 @@ position_smoothing_enabled = true
 [node name="RayCast2D" type="RayCast2D" parent="."]
 rotation = 4.71239
 target_position = Vector2(1.90798e-07, 16)
+
+[node name="JumpingSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_n7sgg")
