@@ -34,4 +34,9 @@ func close():
 
 #called when moving to next level
 func next_level():
-	get_tree().change_scene_to_packed(level)
+	get_parent().end_level()
+
+
+func _on_body_entered(body):
+	if body.name == "Player":
+		next_level()

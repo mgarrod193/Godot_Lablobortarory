@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c47x6gcd3hmd8"]
 
-[ext_resource type="Script" path="res://Laser.gd" id="1_eq4ur"]
+[ext_resource type="Script" path="res://Assets/Scripts/Laser.gd" id="1_eq4ur"]
 [ext_resource type="Texture2D" uid="uid://boglxffgxtovn" path="res://Assets/Art/puzzle_tileset.png" id="2_ll0gi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hevlj"]

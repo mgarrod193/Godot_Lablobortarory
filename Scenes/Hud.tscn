@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b53qegjmush0p"]
+[gd_scene load_steps=6 format=3 uid="uid://b53qegjmush0p"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Hud.gd" id="1_hl3fc"]
+[ext_resource type="FontFile" uid="uid://xf5wel1ccig3" path="res://Assets/Fonts/strasua.ttf" id="2_qhyhk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g62i2"]
 border_width_left = 5
@@ -71,6 +72,7 @@ offset_right = 146.5
 offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_qhyhk")
 theme_override_font_sizes/font_size = 60
 text = "Try again?"
 horizontal_alignment = 1
@@ -89,6 +91,7 @@ offset_bottom = 91.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+theme_override_fonts/font = ExtResource("2_qhyhk")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_dg3dh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dg3dh")

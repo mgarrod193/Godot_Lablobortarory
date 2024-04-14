@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://fmmjoi7am00n"]
+[gd_scene load_steps=8 format=3 uid="uid://fmmjoi7am00n"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/main_menu.gd" id="1_1lbcw"]
 [ext_resource type="Texture2D" uid="uid://boglxffgxtovn" path="res://Assets/Art/puzzle_tileset.png" id="1_6a12l"]
 [ext_resource type="Texture2D" uid="uid://d4iacasxp6gj7" path="res://Assets/Fonts/Lab_blob_oratory.png" id="2_8vlwm"]
+[ext_resource type="FontFile" uid="uid://xf5wel1ccig3" path="res://Assets/Fonts/strasua.ttf" id="4_vtotu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjrhj"]
 texture = ExtResource("1_6a12l")
@@ -58,9 +59,6 @@ shadow_size = 10
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_1lbcw")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-visible = false
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_w5td1")
 format = 2
@@ -83,6 +81,7 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_vtotu")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_tcheq")
 text = "Play"

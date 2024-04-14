@@ -1,13 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://db4obv3uqoxoi"]
 
 [ext_resource type="Texture2D" uid="uid://63swlgbmpm8k" path="res://Assets/Art/basic_phial.png" id="1_p5ggg"]
-[ext_resource type="Script" path="res://Scenes/phial.gd" id="1_uunmn"]
+[ext_resource type="Script" path="res://Assets/Scripts/phial.gd" id="1_uunmn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mr88b"]
 radius = 8.0
 height = 21.875
 
 [node name="Phial" type="Area2D" groups=["Collectable"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_uunmn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

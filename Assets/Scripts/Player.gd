@@ -6,8 +6,8 @@ signal collected #signal for collecting objects
 #player vairables
 var can_move = true
 var starting_position : Vector2
-const SPEED = 125.0
-const JUMP_VELOCITY = -450.0
+const SPEED = 115.0
+const JUMP_VELOCITY = -350.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
