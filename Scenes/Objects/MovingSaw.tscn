@@ -8,7 +8,6 @@
 radius = 7.0
 
 [node name="MovingSaw" type="Sprite2D"]
-position = Vector2(600, 337)
 texture = ExtResource("1_nfmg6")
 script = ExtResource("2_8erie")
 speed = Vector2(0, 10)
@@ -26,3 +25,5 @@ shape = SubResource("CircleShape2D_rsa6y")
 
 [node name="Sprite2D" type="Sprite2D" parent="saw"]
 texture = ExtResource("2_siaoq")
+
+[connection signal="body_entered" from="saw" to="." method="_on_saw_body_entered"]

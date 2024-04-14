@@ -73,6 +73,7 @@ func die():
 #turns collision on, shows character and allows movment
 func restart():
 	position = starting_position
+	await get_tree().create_timer(0.01).timeout
 	$CollisionShape2D.set_deferred("disabled", false)
 	show()
 	can_move = true

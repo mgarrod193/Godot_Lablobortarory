@@ -7,6 +7,7 @@ var endpoint
 
 var move_up = true
 @export var speed = Vector2(0,1)
+@export var turn_speed = PI*50
 
 func _ready():
 	startpoint = $saw/startpoint.position
@@ -22,3 +23,9 @@ func _process(delta):
 		move_up = false
 	elif $saw.position >= endpoint:
 		move_up = true
+	$saw.rotation -= turn_speed * delta/2
+
+
+func _on_saw_body_entered(body):
+	if body.name == "Player":
+		body.die()
