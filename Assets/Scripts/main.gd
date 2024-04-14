@@ -34,6 +34,7 @@ func _on_restart():
 	get_tree().call_group("Lasers", "restart")
 	get_tree().call_group("switches", "restart")
 	$Collectables.get_tree().call_group("Collectable", "restart")
+	get_tree().call_group("saws", "restart")
 	$GUI.show()
 	$GUI.update_score(score)
 	$Hud.hide()
