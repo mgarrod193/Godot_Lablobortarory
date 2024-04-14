@@ -1,7 +1,7 @@
 extends Sprite2D
 
 
-
+var initial_point
 var startpoint
 var endpoint
 
@@ -12,6 +12,7 @@ var move_up = true
 func _ready():
 	startpoint = $saw/startpoint.position
 	endpoint = $saw/endpoint.position
+	initial_point = $saw.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -29,3 +30,8 @@ func _process(delta):
 func _on_saw_body_entered(body):
 	if body.name == "Player":
 		body.die()
+		
+
+func restart():
+	$saw.position = initial_point
+	move_up = true
