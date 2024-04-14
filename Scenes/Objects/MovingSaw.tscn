@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2tdnfpmsgwun"]
+
+[ext_resource type="Texture2D" uid="uid://bykx76vp6uxe" path="res://Assets/Art/saw_path.png" id="1_nfmg6"]
+[ext_resource type="Script" path="res://Assets/Scripts/MovingSaw.gd" id="2_8erie"]
+[ext_resource type="Texture2D" uid="uid://b5jghsmnscdo8" path="res://Assets/Art/saw.png" id="2_siaoq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rsa6y"]
+radius = 7.0
+
+[node name="MovingSaw" type="Sprite2D"]
+position = Vector2(600, 337)
+texture = ExtResource("1_nfmg6")
+script = ExtResource("2_8erie")
+speed = Vector2(0, 10)
+
+[node name="saw" type="Area2D" parent="."]
+
+[node name="startpoint" type="Marker2D" parent="saw"]
+position = Vector2(0, -29)
+
+[node name="endpoint" type="Marker2D" parent="saw"]
+position = Vector2(0, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="saw"]
+shape = SubResource("CircleShape2D_rsa6y")
+
+[node name="Sprite2D" type="Sprite2D" parent="saw"]
+texture = ExtResource("2_siaoq")

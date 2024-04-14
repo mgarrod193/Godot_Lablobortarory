@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlkb7bgu8ler0"]
 
-[ext_resource type="PackedScene" uid="uid://c47x6gcd3hmd8" path="res://Scenes/Laser.tscn" id="1_70i10"]
+[ext_resource type="PackedScene" uid="uid://c47x6gcd3hmd8" path="res://Scenes/Objects/Laser.tscn" id="1_70i10"]
 [ext_resource type="Texture2D" uid="uid://bb7l186r4wygl" path="res://Assets/Art/puzzle_hero/hero_0.png" id="2_dicpb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5e2l8"]

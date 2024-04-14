@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1qvuuyqoq6np"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/GUI.gd" id="1_83hdp"]
+[ext_resource type="FontFile" uid="uid://xf5wel1ccig3" path="res://Assets/Fonts/strasua.ttf" id="2_msq5f"]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_83hdp")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_bottom = 104.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_msq5f")
+theme_override_font_sizes/font_size = 60
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

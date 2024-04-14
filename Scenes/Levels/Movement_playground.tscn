@@ -1,0 +1,261 @@
+[gd_scene load_steps=25 format=3 uid="uid://b77jy53o78nut"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/main.gd" id="1_rm7a2"]
+[ext_resource type="Texture2D" uid="uid://b7duitom5cqh7" path="res://Assets/Art/bg.png" id="2_hd2lo"]
+[ext_resource type="Script" path="res://Assets/Scripts/TilemapCollisionBaker.gd" id="3_u4guq"]
+[ext_resource type="Texture2D" uid="uid://boglxffgxtovn" path="res://Assets/Art/puzzle_tileset.png" id="4_slvq4"]
+[ext_resource type="PackedScene" uid="uid://bnjjqn2bfng5u" path="res://Scenes/Objects/player.tscn" id="5_gh6kq"]
+[ext_resource type="PackedScene" uid="uid://b53qegjmush0p" path="res://Scenes/Canvas/Hud.tscn" id="6_1arho"]
+[ext_resource type="PackedScene" uid="uid://b1qvuuyqoq6np" path="res://Scenes/Canvas/gui.tscn" id="7_kly4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vt364"]
+size = Vector2(16, 304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t70of"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6en3"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pux0s"]
+size = Vector2(64, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihrn8"]
+size = Vector2(96, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwnxw"]
+size = Vector2(64, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45p0g"]
+size = Vector2(144, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jh81p"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72ibw"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7u4o"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll44n"]
+size = Vector2(1968, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxhv"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omu77"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hb8ld"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56f6y"]
+size = Vector2(16, 336)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_657e4"]
+texture = ExtResource("4_slvq4")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/next_alternative_id = 2
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/1 = 1
+5:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/1/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+7:0/0 = 0
+7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+7:1/0 = 0
+7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0 = 0
+7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+6:3/0 = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
+7:3/0 = 0
+7:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:3/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_chdd3"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_657e4")
+
+[node name="main" type="Node"]
+script = ExtResource("1_rm7a2")
+
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hd2lo")
+stretch_mode = 1
+
+[node name="Tiles" type="Node" parent="."]
+
+[node name="TileMapBaker" type="StaticBody2D" parent="Tiles"]
+script = ExtResource("3_u4guq")
+tilemap_nodepath = NodePath("../LevelBase")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(-56, -8)
+shape = SubResource("RectangleShape2D_vt364")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(88, 136)
+shape = SubResource("RectangleShape2D_t70of")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(168, 136)
+shape = SubResource("RectangleShape2D_s6en3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(256, 104)
+shape = SubResource("RectangleShape2D_pux0s")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(384, 88)
+shape = SubResource("RectangleShape2D_ihrn8")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(496, 72)
+shape = SubResource("RectangleShape2D_wwnxw")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(680, 72)
+shape = SubResource("RectangleShape2D_45p0g")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(808, 104)
+shape = SubResource("RectangleShape2D_jh81p")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(840, 104)
+shape = SubResource("RectangleShape2D_72ibw")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(888, 104)
+shape = SubResource("RectangleShape2D_s7u4o")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(920, 152)
+shape = SubResource("RectangleShape2D_ll44n")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(952, 104)
+shape = SubResource("RectangleShape2D_wgxhv")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(1032, 104)
+shape = SubResource("RectangleShape2D_omu77")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(1128, 104)
+shape = SubResource("RectangleShape2D_hb8ld")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Tiles/TileMapBaker"]
+position = Vector2(1896, -24)
+shape = SubResource("RectangleShape2D_56f6y")
+
+[node name="LevelBase" type="TileMap" parent="Tiles"]
+texture_filter = 1
+tile_set = SubResource("TileSet_chdd3")
+format = 2
+layer_0/tile_data = PackedInt32Array(655357, 65536, 1, 655358, 65536, 1, 655359, 65536, 1, 589824, 65536, 1, 589825, 65536, 1, 589826, 65536, 1, 589827, 65536, 1, 589828, 65536, 1, 589829, 65536, 1, 589830, 65536, 1, 589831, 65536, 1, 589832, 65536, 1, 589833, 65536, 1, 589834, 65536, 1, 589835, 65536, 1, 589836, 65536, 1, 589837, 65536, 1, 589838, 65536, 1, 589839, 65536, 1, 589840, 65536, 1, 589841, 65536, 1, 589842, 65536, 1, 589843, 65536, 1, 589844, 65536, 1, 589845, 65536, 1, 589846, 65536, 1, 589847, 65536, 1, 589848, 65536, 1, 589849, 65536, 1, 589850, 65536, 1, 589851, 65536, 1, 589852, 65536, 1, 589853, 65536, 1, 589854, 65536, 1, 589855, 65536, 1, 589856, 65536, 1, 589857, 65536, 1, 589858, 65536, 1, 589859, 65536, 1, 589860, 65536, 1, 589861, 65536, 1, 589862, 65536, 1, 589863, 65536, 1, 589864, 65536, 1, 589865, 65536, 1, 589866, 65536, 1, 589867, 65536, 1, 589868, 65536, 1, 589869, 65536, 1, 589870, 65536, 1, 589871, 65536, 1, 589872, 65536, 1, 589873, 65536, 1, 589874, 65536, 1, 589875, 65536, 1, 589876, 65536, 1, 589877, 65536, 1, 589878, 65536, 1, 589879, 65536, 1, 589880, 65536, 1, 589881, 65536, 1, 589882, 65536, 1, 589883, 65536, 1, 589884, 65536, 1, 589885, 65536, 1, 589886, 65536, 1, 589887, 65536, 1, 589888, 65536, 1, 589889, 65536, 1, 589890, 65536, 1, 589891, 65536, 1, 589892, 65536, 1, 589893, 65536, 1, 589894, 65536, 1, 589895, 65536, 1, 589896, 65536, 1, 589897, 65536, 1, 589898, 65536, 1, 589899, 65536, 1, 589900, 65536, 1, 589901, 65536, 1, 589902, 65536, 1, 589903, 65536, 1, 589904, 65536, 1, 589905, 65536, 1, 589906, 65536, 1, 589907, 65536, 1, 589908, 65536, 1, 589909, 65536, 1, 589910, 65536, 1, 589911, 65536, 1, 589912, 65536, 1, 589913, 65536, 1, 589914, 65536, 1, 589915, 65536, 1, 589916, 65536, 1, 589917, 65536, 1, 589918, 65536, 1, 589919, 65536, 1, 589920, 65536, 1, 589921, 65536, 1, 589922, 65536, 1, 589923, 65536, 1, 589924, 65536, 1, 589925, 65536, 1, 589926, 65536, 1, 589927, 65536, 1, 589928, 65536, 1, 589929, 65536, 1, 589930, 65536, 1, 589931, 65536, 1, 589932, 65536, 1, 589933, 65536, 1, 589934, 65536, 1, 589935, 65536, 1, 589936, 65536, 1, 589937, 65536, 1, 589938, 65536, 1, 589939, 65536, 1, 589940, 65536, 1, 589941, 65536, 1, -589828, 65536, 1, -524292, 65536, 1, -458756, 65536, 1, -393220, 65536, 1, -327684, 65536, 1, -262148, 65536, 1, -196612, 65536, 1, -131076, 65536, 1, -65540, 65536, 1, -4, 65536, 1, 65532, 65536, 1, 131068, 65536, 1, 196604, 65536, 1, 262140, 65536, 1, 327676, 65536, 1, 393212, 65536, 1, 458748, 65536, 1, 524284, 65536, 1, 589820, 65536, 1, 655356, 65536, 1, -786314, 65536, 1, -720778, 65536, 1, -655242, 65536, 1, -589706, 65536, 1, -524170, 65536, 1, -458634, 65536, 1, -393098, 65536, 1, -327562, 65536, 1, -262026, 65536, 1, -196490, 65536, 1, -130954, 65536, 1, -65418, 65536, 1, 118, 65536, 1, 65654, 65536, 1, 131190, 65536, 1, 196726, 65536, 1, 262262, 65536, 1, 327798, 65536, 1, 393334, 65536, 1, 458870, 65536, 1, 524406, 65536, 1, 589942, 65536, 1, 524293, 65536, 1, 524298, 65536, 1, 393230, 65536, 1, 393231, 65536, 1, 393232, 65536, 1, 393233, 65536, 1, 327701, 65536, 1, 327702, 65536, 1, 327703, 65536, 1, 327704, 65536, 1, 327705, 65536, 1, 327706, 65536, 1, 262173, 65536, 1, 262174, 65536, 1, 262175, 65536, 1, 262176, 65536, 1, 262182, 65536, 1, 262183, 65536, 1, 262184, 65536, 1, 262185, 65536, 1, 262186, 65536, 1, 262187, 65536, 1, 262188, 65536, 1, 262189, 65536, 1, 262190, 65536, 1, 393266, 65536, 1, 393268, 65536, 1, 393271, 65536, 1, 393275, 65536, 1, 393280, 65536, 1, 393286, 65536, 1)
+
+[node name="StartingPosition" type="Marker2D" parent="."]
+position = Vector2(32, 120)
+
+[node name="Player" parent="." instance=ExtResource("5_gh6kq")]
+
+[node name="Hud" parent="." instance=ExtResource("6_1arho")]
+visible = false
+
+[node name="GUI" parent="." instance=ExtResource("7_kly4f")]
+
+[connection signal="collected" from="Player" to="." method="_on_player_collected"]
+[connection signal="killed" from="Player" to="." method="_on_player_killed"]
+[connection signal="restart" from="Hud" to="." method="_on_restart"]

@@ -4,7 +4,6 @@ var game_over : bool #game status variable
 var score : int #Player's score
 var max_score : int
 
-@export var Collectable_scene : PackedScene
 var collectables
 
 # Called when the node enters the scene tree for the first time.
