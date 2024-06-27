@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtpry327m0wnl"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/TimedLaser.gd" id="1_i7u0l"]
+[ext_resource type="Texture2D" uid="uid://boglxffgxtovn" path="res://Assets/Art/puzzle_tileset.png" id="2_1fmox"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_da5kn"]
+atlas = ExtResource("2_1fmox")
+region = Rect2(64, 16, 16, 16)
+
+[node name="TimedLaser" type="RayCast2D"]
+target_position = Vector2(1000, 0)
+script = ExtResource("1_i7u0l")
+timer = 3.0
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(-8, 0, 0, 0)
+width = 4.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_da5kn")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

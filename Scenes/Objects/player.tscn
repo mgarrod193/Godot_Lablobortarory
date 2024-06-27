@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnjjqn2bfng5u"]
+[gd_scene load_steps=13 format=3 uid="uid://bnjjqn2bfng5u"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_8h6gm"]
 [ext_resource type="Texture2D" uid="uid://bb7l186r4wygl" path="res://Assets/Art/puzzle_hero/hero_0.png" id="2_dhf02"]
@@ -66,6 +66,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l2smw"]
 size = Vector2(16, 16)
 
+[sub_resource type="Gradient" id="Gradient_o7oxg"]
+offsets = PackedFloat32Array(0, 0.707792)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c0sg0"]
+gradient = SubResource("Gradient_o7oxg")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 collision_layer = 3
@@ -92,3 +101,8 @@ target_position = Vector2(1.90798e-07, 16)
 
 [node name="JumpingSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_n7sgg")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+energy = 1.4
+texture = SubResource("GradientTexture2D_c0sg0")

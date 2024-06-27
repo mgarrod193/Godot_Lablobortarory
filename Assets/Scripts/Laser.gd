@@ -6,10 +6,13 @@ var line_initial_status
 var collide_point
 var target = get_target_position()
 
+var point_light
+
 
 func _ready():
 	initial_status = is_enabled()
 	line_initial_status = $Line2D.visible
+	point_light =  $PointLight2D
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,12 +27,13 @@ func _process(_delta):
 
 
 #gets the collide point coordinates if it exists else returns target position coords
-func _physics_process(_delta):
+func _physics_process(delta):
 	if is_colliding():
 		collide_point = to_local(get_collision_point())
+	#	point_light.set_transform(to_vector2(collide_point))
 	else:
 		collide_point = get_target_position()
-
+	#	point_light.set_transform(to_vector2(collide_point))
 
 #Switches between off and on state of laster and toggles visibiliy as necessary
 func switch():

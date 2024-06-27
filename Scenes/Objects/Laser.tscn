@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c47x6gcd3hmd8"]
+[gd_scene load_steps=6 format=3 uid="uid://c47x6gcd3hmd8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Laser.gd" id="1_eq4ur"]
 [ext_resource type="Texture2D" uid="uid://boglxffgxtovn" path="res://Assets/Art/puzzle_tileset.png" id="2_ll0gi"]
@@ -6,6 +6,15 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_hevlj"]
 atlas = ExtResource("2_ll0gi")
 region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="Gradient" id="Gradient_jogui"]
+offsets = PackedFloat32Array(0, 0.837662)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_47wah"]
+gradient = SubResource("Gradient_jogui")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="Laser" type="RayCast2D" groups=["Lasers"]]
 target_position = Vector2(1000, 0)
@@ -32,3 +41,13 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_hevlj")
 metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(704, 0)
+scale = Vector2(23, 1)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.768627)
+texture = SubResource("GradientTexture2D_47wah")
